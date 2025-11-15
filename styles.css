@@ -210,3 +210,25 @@ body {
 .number-people-input:focus {
     outline: 1px solid var(--green-400);
 }
+
+.results-container {
+    padding: var(--spacing-300);
+    border-radius: 15px;
+    background-color: var(--green-900);
+}
+
+.results-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+.reset-button {
+    padding: var(--spacing-100) var(--spacing-400);
+    border-radius: 5px;
+    background-color: var(--green-400);
+    color: var(--green-900);
+    outline: none;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
