@@ -93,7 +93,7 @@ body {
     padding-top: 41px;
 }
 
-.main-container {
+.calculator {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -103,30 +103,30 @@ body {
     background-color: var(--white);
 }
 
-.content-container {
+.calculator__content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-400);
 }
 
-.bill-container {
+.calculator__bill {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-400);
     padding: 0 var(--spacing-100);
 }
 
-.bill-header {
+.calculator__bill-header {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-100);
 }
 
-.bill-label {
+.calculator__bill-label {
     color: var(--grey-500);
 }
 
-.bill-amount {
+.calculator__bill-input {
     padding: var(--spacing-100) var(--spacing-200) var(--spacing-100) var(--spacing-400);
     border-radius: 5px;
     border: 1px solid var(--grey-300);
@@ -138,27 +138,27 @@ body {
     color: var(--green-900);
 }
 
-.bill-amount:focus {
+.calculator__bill-input:focus {
     outline: 1px solid var(--green-400);
 }
 
-.selection-container {
+.calculator__tip-selection {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-100);
 }
 
-.tip-options-container {
+.calculator__tip-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-200);
 }
 
-.tip-label {
+.calculator__tip-label {
     color: var(--grey-500);
 }
 
-.tip-button {
+.calculator__tip-button {
     width: 100%;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: 5px;
@@ -168,7 +168,7 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-.custom-option {
+.calculator__tip-input {
     width: 100%;
     font-family: 'Space Mono', monospace;
     font-size: 24px;
@@ -181,21 +181,21 @@ body {
     text-align: center;
 }
 
-.custom-option::placeholder {
+.calculator__tip-input::placeholder {
     color: var(--grey-550);
 }
 
-.number-people-control {
+.calculator__people {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-100);
 }
 
-.people-input-label {
+.calculator__people-label {
     color: var(--grey-500);
 }
 
-.number-people-input {
+.calculator__people-input {
     padding: var(--spacing-100) var(--spacing-200) var(--spacing-100) var(--spacing-400);
     border-radius: 5px;
     border: 1px solid var(--grey-300);
@@ -207,51 +207,51 @@ body {
     color: var(--green-900);
 }
 
-.number-people-input:focus {
+.calculator__people-input:focus {
     outline: 1px solid var(--green-400);
 }
 
-.results-container {
+.calculator__results {
     padding: var(--spacing-300);
     border-radius: 15px;
     background-color: var(--green-900);
 }
 
-.results-content {
+.calculator__results-content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-400);
 }
 
-.results-details {
+.calculator__results-details {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-300);
 }
 
-.tip-amount-row, .total-amount-row {
+.calculator__result-row {
     display: flex;
     justify-content: space-between;
 }
 
-.tip-amount-label, .total-amount-label {
+.calculator__result-label {
     display: flex;
     flex-direction: column;
 }
 
-.label-title {
+.calculator__result-title {
     color: var(--white);
 }
 
-.label-subtitle {
+.calculator__result-subtitle {
     color: var(--grey-400);
 }
 
-.tip-amount-value, .total-amount-value {
+.calculator__result-value {
     color: var(--green-400);
 }
 
-.reset-button {
+.calculator__reset-button {
     padding: var(--spacing-100) var(--spacing-400);
     border-radius: 5px;
     background-color: var(--green-400);

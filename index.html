@@ -14,48 +14,48 @@
 <header class="header">
     <img src="./images/logo.svg" alt="Splitter Logo">
 </header>
-<main class="main-container">
-    <div class="content-container">
-        <div class="bill-container">
-            <div class="bill-header">
-                <label for="bill-input" class="bill-label text-preset-5">Bill</label>
-                <input id="bill-input" class="bill-amount text-preset-3" type="number" min="0">
+<main class="calculator">
+    <div class="calculator__content">
+        <div class="calculator__bill">
+            <div class="calculator__bill-header">
+                <label for="bill-input" class="calculator__bill-label text-preset-5">Bill</label>
+                <input id="bill-input" class="calculator__bill-input text-preset-3" type="number" min="0">
             </div>
-            <div class="selection-container">
-                <label for="tip-custom" class="tip-label text-preset-5">Select Tip %</label>
-                <div class="tip-options-container">
-                    <button class="tip-button text-preset-3">5%</button>
-                    <button class="tip-button text-preset-3">10%</button>
-                    <button class="tip-button text-preset-3">15%</button>
-                    <button class="tip-button text-preset-3">25%</button>
-                    <button class="tip-button text-preset-3">50%</button>
-                    <input id="tip-custom" class="custom-option" type="number" placeholder="Custom">
+            <div class="calculator__tip-selection">
+                <label for="tip-custom" class="calculator__tip-label text-preset-5">Select Tip %</label>
+                <div class="calculator__tip-options">
+                    <button class="calculator__tip-button text-preset-3">5%</button>
+                    <button class="calculator__tip-button text-preset-3">10%</button>
+                    <button class="calculator__tip-button text-preset-3">15%</button>
+                    <button class="calculator__tip-button text-preset-3">25%</button>
+                    <button class="calculator__tip-button text-preset-3">50%</button>
+                    <input id="tip-custom" class="calculator__tip-input" type="number" placeholder="Custom">
                 </div>
             </div>
-            <div class="number-people-control">
-                <label for="people-input" class="people-input-label text-preset-5">Number of People</label>
-                <input id="people-input" class="number-people-input text-preset-3" type="number">
+            <div class="calculator__people">
+                <label for="people-input" class="calculator__people-label text-preset-5">Number of People</label>
+                <input id="people-input" class="calculator__people-input text-preset-3" type="number">
             </div>
         </div>
-        <div class="results-container">
-            <div class="results-content">
-                <div class="results-details">
-                    <div class="tip-amount-row">
-                        <div class="tip-amount-label text-preset-5">
-                            <span class="label-title text-preset-5">Tip Amount</span>
-                            <span class="label-subtitle text-preset-6">/ person</span>
+        <div class="calculator__results">
+            <div class="calculator__results-content">
+                <div class="calculator__results-details">
+                    <div class="calculator__result-row">
+                        <div class="calculator__result-label text-preset-5">
+                            <span class="calculator__result-title text-preset-5">Tip Amount</span>
+                            <span class="calculator__result-subtitle text-preset-6">/ person</span>
                         </div>
-                        <div class="tip-amount-value text-preset-2">$0.00</div>
+                        <div class="calculator__result-value text-preset-2">$0.00</div>
                     </div>
-                    <div class="total-amount-row">
-                        <div class="total-amount-label text-preset-5">
-                            <span class="label-title text-preset-5">Total</span>
-                            <span class="label-subtitle text-preset-6">/ person</span>
+                    <div class="calculator__result-row">
+                        <div class="calculator__result-label text-preset-5">
+                            <span class="calculator__result-title text-preset-5">Total</span>
+                            <span class="calculator__result-subtitle text-preset-6">/ person</span>
                         </div>
-                        <div class="total-amount-value text-preset-2">$0.00</div>
+                        <div class="calculator__result-value text-preset-2">$0.00</div>
                     </div>
                 </div>
-                <button class="reset-button text-preset-4">Reset</button>
+                <button class="calculator__reset-button text-preset-4">Reset</button>
             </div>
         </div>
     </div>
