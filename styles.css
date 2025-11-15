@@ -32,6 +32,49 @@
     --orange-400: #E17052;
 }
 
+/* Typography Presets */
+.text-preset-1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1px;
+}
+
+.text-preset-2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -0.67px;
+}
+
+.text-preset-3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+.text-preset-4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+
+.text-preset-5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+.text-preset-6 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -60,7 +103,7 @@ body {
     background-color: var(--white);
 }
 
-.content-container  {
+.content-container {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-400);
@@ -76,4 +119,24 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-100);
+}
+
+.bill-label {
+    color: var(--grey-500);
+}
+
+.bill-amount {
+    padding: var(--spacing-100) var(--spacing-200) var(--spacing-100) var(--spacing-400);
+    border-radius: 5px;
+    border: 1px solid var(--grey-300);
+    background-color: var(--grey-50);
+    background-image: url('./images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: var(--spacing-200) center;
+    text-align: right;
+    color: var(--green-900);
+}
+
+.bill-amount:focus {
+    outline: 1px solid var(--green-400);
 }
