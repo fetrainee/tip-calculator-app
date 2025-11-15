@@ -171,8 +171,6 @@ body {
 .calculator__tip-input {
     width: 100%;
     font-family: 'Space Mono', monospace;
-    font-size: 24px;
-    font-weight: 700;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: 5px;
     border: none;
