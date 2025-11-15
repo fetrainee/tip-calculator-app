@@ -159,10 +159,28 @@ body {
 }
 
 .tip-button {
+    width: 100%;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: 5px;
-    /*border: 1px solid var(--grey-300);*/
     background-color: var(--green-900);
     color: var(--white);
     outline: none;
+    font-family: 'Space Mono', monospace;
+}
+
+.custom-option {
+    width: 100%;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    padding: var(--spacing-100) var(--spacing-200);
+    border-radius: 5px;
+    border: none;
+    background-color: var(--grey-50);
+    color: var(--green-900);
+    text-align: center;
+}
+
+.custom-option::placeholder {
+    color: var(--grey-550);
 }
