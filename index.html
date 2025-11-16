@@ -25,11 +25,11 @@
             <div class="calculator__tip-selection">
                 <label for="tip-custom" class="calculator__tip-label">Select Tip %</label>
                 <div class="calculator__tip-options">
-                    <button class="calculator__tip-button">5%</button>
-                    <button class="calculator__tip-button">10%</button>
-                    <button class="calculator__tip-button">15%</button>
-                    <button class="calculator__tip-button">25%</button>
-                    <button class="calculator__tip-button">50%</button>
+                    <button class="calculator__tip-button" data-value="5">5%</button>
+                    <button class="calculator__tip-button" data-value="10">10%</button>
+                    <button class="calculator__tip-button" data-value="15">15%</button>
+                    <button class="calculator__tip-button" data-value="25">25%</button>
+                    <button class="calculator__tip-button" data-value="50">50%</button>
                     <input id="tip-custom" class="calculator__tip-input" type="number" min="0" placeholder="Custom">
                 </div>
             </div>
@@ -46,14 +46,14 @@
                             <span class="calculator__result-title">Tip Amount</span>
                             <span class="calculator__result-subtitle">/ person</span>
                         </div>
-                        <div class="calculator__result-value">$0.00</div>
+                        <div id="tip-amount" class="calculator__result-value">$0.00</div>
                     </div>
                     <div class="calculator__result-row">
                         <div class="calculator__result-label">
                             <span class="calculator__result-title">Total</span>
                             <span class="calculator__result-subtitle">/ person</span>
                         </div>
-                        <div class="calculator__result-value">$0.00</div>
+                        <div id="total-amount" class="calculator__result-value">$0.00</div>
                     </div>
                 </div>
                 <button class="calculator__reset-button">Reset</button>
