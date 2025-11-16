@@ -306,4 +306,21 @@ body {
         gap: var(--spacing-600);
         flex-direction: row;
     }
+
+    .calculator__bill,
+    .calculator__results {
+        flex: 1;
+    }
+
+    .calculator__bill {
+        gap: var(--spacing-500);
+    }
+
+    .calculator__results-content {
+        gap: var(--spacing-1600);
+    }
+
+    .calculator__results-details {
+        gap: var(--spacing-300);
+    }
 }
