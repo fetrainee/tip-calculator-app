@@ -139,6 +139,11 @@ input[type="number"]::-webkit-inner-spin-button {
     outline: 1px solid var(--green-400);
 }
 
+.calculator__bill-input::placeholder,
+.calculator__people-input::placeholder {
+    color: var(--grey-300);
+}
+
 .calculator__tip-selection {
     display: flex;
     flex-direction: column;
