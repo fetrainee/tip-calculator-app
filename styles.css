@@ -291,3 +291,19 @@ body {
         letter-spacing: var(--letter-spacing-tight);
     }
 }
+
+@media (min-width: 1440px) {
+    .header {
+        padding-bottom: 88px;
+    }
+
+    .calculator {
+        min-width: 920px;
+        padding: var(--spacing-400);
+    }
+
+    .calculator__content {
+        gap: var(--spacing-600);
+        flex-direction: row;
+    }
+}
