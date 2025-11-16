@@ -6,6 +6,7 @@
     --spacing-200: 16px;
     --spacing-300: 24px;
     --spacing-400: 32px;
+    --spacing-500: 40px;
     --spacing-600: 48px;
     --spacing-1000: 80px;
     --spacing-1200: 96px;
@@ -257,4 +258,27 @@ body {
     outline: none;
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .calculator {
+        max-width: 608px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: var(--spacing-600) var(--spacing-1000);
+        border-radius: 25px;
+    }
+
+    .calculator__content {
+        gap: var(--spacing-500);
+    }
+
+    .calculator__bill {
+        padding: 0;
+        gap: var(--spacing-300);
+    }
+
+    .calculator__tip-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
