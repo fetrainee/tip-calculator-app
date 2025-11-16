@@ -135,7 +135,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .calculator__bill-input:focus,
-.calculator__people-input:focus {
+.calculator__people-input:focus,
+.calculator__tip-input:focus {
     outline: 1px solid var(--green-400);
 }
 
@@ -178,7 +179,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100%;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: 5px;
-    border: none;
+    border: 1px solid var(--grey-300);
     background-color: var(--grey-50);
     color: var(--green-900);
     text-align: right;
@@ -189,12 +190,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .calculator__tip-input::placeholder {
     color: var(--grey-550);
-}
-
-.calculator__bill-input:focus,
-.calculator__people-input:focus,
-.calculator__tip-input:focus {
-    border: 1px solid var(--green-400);
 }
 
 .calculator__people {
