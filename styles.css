@@ -191,6 +191,12 @@ input[type="number"]::-webkit-inner-spin-button {
     color: var(--grey-550);
 }
 
+.calculator__bill-input:focus,
+.calculator__people-input:focus,
+.calculator__tip-input:focus {
+    border: 1px solid var(--green-400);
+}
+
 .calculator__people {
     display: flex;
     flex-direction: column;
@@ -209,6 +215,16 @@ input[type="number"]::-webkit-inner-spin-button {
 .calculator__people-input {
     background-image: url('./images/icon-person.svg');
 }
+
+.calculator__people-input--error {
+    border: 1px solid var(--orange-400);
+}
+
+.calculator__people-input--error:focus {
+    outline: 1px solid var(--orange-400);
+    border: 1px solid var(--orange-400);
+}
+
 
 .calculator__results {
     padding: var(--spacing-300);
