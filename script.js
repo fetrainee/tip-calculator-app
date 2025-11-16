@@ -18,6 +18,16 @@ const getNumberOfPeople = () => {
     return parseInt(value) || 0;
 };
 
+const showPersonError = () => {
+    document.getElementById('people-input').classList.add('calculator__people-input--error');
+    document.querySelector('.calculator__people-label--error').innerText = 'Can’t be zero';
+};
+
+const removePersonError = () => {
+    document.getElementById('people-input').classList.remove('calculator__people-input--error');
+    document.querySelector('.calculator__people-label--error').innerText = '';
+};
+
 const showResult = (tipAmount, totalAmount) => {
     document.getElementById('tip-amount').textContent = `$${tipAmount.toFixed(2)}`;
     document.getElementById('total-amount').textContent = `$${totalAmount.toFixed(2)}`;
@@ -30,7 +40,7 @@ const calculateTip = () => {
 
     // Validation
     if (numberOfPeople === 0) {
-        console.error('Number of people cannot be zero');
+        showPersonError()
         showResult(0, 0);
         return;
     }
@@ -51,7 +61,24 @@ const onTipButtonClick = (event) => {
     calculateTip();
 };
 
+const onPersonInput = (event) => {
+    const input = event.target;
+    const value = parseInt(input.value);
+
+    if (value === 0) {
+        showPersonError();
+        return;
+    }
+
+    if ((value > 0 || isNaN(value)) && input.classList.contains('calculator__people-input--error')) {
+        removePersonError();
+    }
+
+    calculateTip();
+}
+
 document.querySelectorAll('.calculator__tip-button').forEach(button => button.addEventListener('click', onTipButtonClick));
 document.getElementById('tip-custom').addEventListener('focus', () => resetTipButtons());
 document.getElementById('tip-custom').addEventListener('input', () => calculateTip());
 document.getElementById('tip-custom').addEventListener('blur', () => calculateTip());
+document.getElementById('people-input').addEventListener('input', onPersonInput);

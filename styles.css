@@ -197,6 +197,15 @@ input[type="number"]::-webkit-inner-spin-button {
     gap: var(--spacing-100);
 }
 
+.calculator__people-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator__people-label--error {
+    color: var(--orange-400);
+}
+
 .calculator__people-input {
     background-image: url('./images/icon-person.svg');
 }
