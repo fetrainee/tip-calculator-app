@@ -269,6 +269,22 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .calculator__results {
+        padding: var(--spacing-300) var(--spacing-400);
+    }
+
+    .calculator__results-content {
+        gap: var(--spacing-200);
+    }
+
+    .calculator__results-details {
+        gap: var(--spacing-100);
+    }
+
+    .calculator__result-label {
+        justify-content: center;
+    }
+
     .calculator__result-value {
         font-size: var(--font-size-xl);
         line-height: var(--line-height-xl);
