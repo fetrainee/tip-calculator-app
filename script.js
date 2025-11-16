@@ -1,3 +1,4 @@
+// === Getter functions ===
 const getBillValue = () => {
     const value = document.getElementById('bill-input').value;
     return parseFloat(value) || 0;
@@ -14,32 +15,7 @@ const getNumberOfPeople = () => {
     return parseInt(value) || 0;
 };
 
-const showPersonError = () => {
-    document.getElementById('people-input').classList.add('calculator__people-input--error');
-    document.querySelector('.calculator__people-label--error').innerText = 'Can’t be zero';
-};
-
-const removePersonError = () => {
-    document.getElementById('people-input').classList.remove('calculator__people-input--error');
-    document.querySelector('.calculator__people-label--error').innerText = '';
-};
-
-const showResult = (tipAmount, totalAmount) => {
-    document.getElementById('tip-amount').textContent = `$${tipAmount.toFixed(2)}`;
-    document.getElementById('total-amount').textContent = `$${totalAmount.toFixed(2)}`;
-};
-
-
-const onTipButtonClick = (event) => {
-    resetTipButtons();
-
-    event.target.classList.add('calculator__tip-button--selected');
-
-    document.getElementById('tip-custom').value = '';
-
-    calculateTip();
-};
-
+// === Helper functions ===
 const resetTipButtons = () => {
     document.querySelectorAll('.calculator__tip-button').forEach(button => button.classList.remove('calculator__tip-button--selected'));
 };
@@ -54,33 +30,23 @@ const disableResetButton = () => {
     document.querySelector('.calculator__reset-button').classList.remove('calculator__reset-button--active');
 }
 
-const onResetClick = (event) => {
-    disableResetButton()
+// === UI functions ===
+const showPersonError = () => {
+    document.getElementById('people-input').classList.add('calculator__people-input--error');
+    document.querySelector('.calculator__people-label--error').innerText = "Can't be zero";
+};
 
-    document.getElementById('bill-input').value = '';
-    document.getElementById('tip-custom').value = '';
-    document.getElementById('people-input').value = '';
-    resetTipButtons();
-    removePersonError();
-    showResult(0, 0);
-}
+const removePersonError = () => {
+    document.getElementById('people-input').classList.remove('calculator__people-input--error');
+    document.querySelector('.calculator__people-label--error').innerText = '';
+};
 
-const onPeopleInput = (event) => {
-    const input = event.target;
-    const value = parseInt(input.value);
+const showResult = (tipAmount, totalAmount) => {
+    document.getElementById('tip-amount').textContent = `$${tipAmount.toFixed(2)}`;
+    document.getElementById('total-amount').textContent = `$${totalAmount.toFixed(2)}`;
+};
 
-    if (value === 0) {
-        showPersonError();
-        return;
-    }
-
-    if ((value > 0 || isNaN(value)) && input.classList.contains('calculator__people-input--error')) {
-        removePersonError();
-    }
-
-    calculateTip();
-}
-
+// === Main logic ===
 const calculateTip = () => {
     const billValue = getBillValue();
     const tipPercentage = getTipPercentage();
@@ -98,6 +64,44 @@ const calculateTip = () => {
 
     showResult(tipAmount / numberOfPeople, totalAmount / numberOfPeople);
     enableResetButton();
+}
+
+// === Event handlers ===
+const onTipButtonClick = (event) => {
+    resetTipButtons();
+
+    event.target.classList.add('calculator__tip-button--selected');
+
+    document.getElementById('tip-custom').value = '';
+
+    calculateTip();
+};
+
+const onPeopleInput = (event) => {
+    const input = event.target;
+    const value = parseInt(input.value);
+
+    if (value === 0) {
+        showPersonError();
+        return;
+    }
+
+    if ((value > 0 || isNaN(value)) && input.classList.contains('calculator__people-input--error')) {
+        removePersonError();
+    }
+
+    calculateTip();
+}
+
+const onResetClick = () => {
+    disableResetButton()
+
+    document.getElementById('bill-input').value = '';
+    document.getElementById('tip-custom').value = '';
+    document.getElementById('people-input').value = '';
+    resetTipButtons();
+    removePersonError();
+    showResult(0, 0);
 }
 
 document.querySelectorAll('.calculator__tip-button').forEach(button => button.addEventListener('click', onTipButtonClick));
