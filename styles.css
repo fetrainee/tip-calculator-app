@@ -237,8 +237,8 @@ body {
 .calculator__reset-button {
     padding: var(--spacing-100) var(--spacing-400);
     border-radius: 5px;
-    background-color: var(--green-400);
-    color: var(--green-900);
+    background-color: var(--green-750);
+    color: var(--green-800);
     border: none;
     outline: none;
     font-family: inherit;
