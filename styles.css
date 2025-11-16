@@ -63,6 +63,7 @@
 body {
     font-family: 'Space Mono', monospace;
     font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
     background-color: var(--grey-200);
 }
 
@@ -102,29 +103,34 @@ body {
     gap: var(--spacing-100);
 }
 
-.calculator__bill-label {
+.calculator__bill-label,
+.calculator__tip-label,
+.calculator__people-label {
     color: var(--grey-500);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
-.calculator__bill-input {
+.calculator__bill-input,
+.calculator__people-input {
     padding: var(--spacing-100) var(--spacing-200) var(--spacing-100) var(--spacing-400);
     border-radius: 5px;
     border: 1px solid var(--grey-300);
     background-color: var(--grey-50);
-    background-image: url('./images/icon-dollar.svg');
     background-repeat: no-repeat;
     background-position: var(--spacing-200) center;
     text-align: right;
     color: var(--green-900);
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
-.calculator__bill-input:focus {
+.calculator__bill-input {
+    background-image: url('./images/icon-dollar.svg');
+}
+
+.calculator__bill-input:focus,
+.calculator__people-input:focus {
     outline: 1px solid var(--green-400);
 }
 
@@ -140,29 +146,21 @@ body {
     gap: var(--spacing-200);
 }
 
-.calculator__tip-label {
-    color: var(--grey-500);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-    letter-spacing: var(--letter-spacing-normal);
-}
-
 .calculator__tip-button {
     width: 100%;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: 5px;
     background-color: var(--green-900);
     color: var(--white);
+    border: none;
     outline: none;
-    font-family: 'Space Mono', monospace;
+    font-family: inherit;
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
 .calculator__tip-input {
     width: 100%;
-    font-family: 'Space Mono', monospace;
     padding: var(--spacing-100) var(--spacing-200);
     border-radius: 5px;
     border: none;
@@ -171,7 +169,6 @@ body {
     text-align: center;
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
 .calculator__tip-input::placeholder {
@@ -184,30 +181,8 @@ body {
     gap: var(--spacing-100);
 }
 
-.calculator__people-label {
-    color: var(--grey-500);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-    letter-spacing: var(--letter-spacing-normal);
-}
-
 .calculator__people-input {
-    padding: var(--spacing-100) var(--spacing-200) var(--spacing-100) var(--spacing-400);
-    border-radius: 5px;
-    border: 1px solid var(--grey-300);
-    background-color: var(--grey-50);
     background-image: url('./images/icon-person.svg');
-    background-repeat: no-repeat;
-    background-position: var(--spacing-200) center;
-    text-align: right;
-    color: var(--green-900);
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-md);
-    letter-spacing: var(--letter-spacing-normal);
-}
-
-.calculator__people-input:focus {
-    outline: 1px solid var(--green-400);
 }
 
 .calculator__results {
@@ -242,14 +217,12 @@ body {
     color: var(--white);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
 .calculator__result-subtitle {
     color: var(--grey-400);
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
 .calculator__result-value {
@@ -264,12 +237,12 @@ body {
     border-radius: 5px;
     background-color: var(--green-400);
     color: var(--green-900);
+    border: none;
     outline: none;
-    font-family: 'Space Mono', monospace;
+    font-family: inherit;
     text-transform: uppercase;
     font-size: var(--font-size-sm);
     line-height: var(--line-height-sm);
-    letter-spacing: var(--letter-spacing-normal);
 }
 
 @media (min-width: 768px) {
