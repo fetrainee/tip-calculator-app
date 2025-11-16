@@ -347,4 +347,13 @@ input[type="number"]::-webkit-inner-spin-button {
     .calculator__results-details {
         gap: var(--spacing-300);
     }
+
+    .calculator__reset-button {
+        cursor: pointer;
+    }
+
+    .calculator__reset-button:hover {
+        background-color: var(--green-400);
+        color: var(--green-900);
+    }
 }
