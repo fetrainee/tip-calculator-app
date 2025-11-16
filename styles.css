@@ -270,6 +270,11 @@ input[type="number"]::-webkit-inner-spin-button {
     line-height: var(--line-height-sm);
 }
 
+.calculator__reset-button--active {
+    background-color: var(--green-400);
+    color: var(--green-900);
+}
+
 @media (min-width: 768px) {
     .calculator {
         max-width: 608px;
@@ -367,7 +372,7 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     .calculator__reset-button:hover {
-        background-color: var(--green-400);
+        background-color: var(--green-200);
         color: var(--green-900);
     }
 }
