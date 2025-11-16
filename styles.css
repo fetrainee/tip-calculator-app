@@ -176,7 +176,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border: none;
     background-color: var(--grey-50);
     color: var(--green-900);
-    text-align: center;
+    text-align: right;
     font-family: inherit;
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
