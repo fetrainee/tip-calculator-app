@@ -329,6 +329,12 @@ input[type="number"]::-webkit-inner-spin-button {
         color: var(--green-900);
     }
 
+    .calculator__bill-input,
+    .calculator__people-input,
+    .calculator__tip-input {
+        cursor: pointer;
+    }
+
     .calculator__results-content {
         gap: var(--spacing-1600);
     }
