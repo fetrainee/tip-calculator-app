@@ -320,6 +320,15 @@ input[type="number"]::-webkit-inner-spin-button {
         gap: var(--spacing-500);
     }
 
+    .calculator__tip-button {
+        cursor: pointer;
+    }
+
+    .calculator__tip-button:hover {
+        background-color: var(--green-200);
+        color: var(--green-900);
+    }
+
     .calculator__results-content {
         gap: var(--spacing-1600);
     }
