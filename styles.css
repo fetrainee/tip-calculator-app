@@ -190,6 +190,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .calculator__tip-input::placeholder {
     color: var(--grey-550);
+    text-align: center;
 }
 
 .calculator__people {
