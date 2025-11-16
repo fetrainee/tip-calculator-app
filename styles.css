@@ -121,6 +121,7 @@ body {
     background-position: var(--spacing-200) center;
     text-align: right;
     color: var(--green-900);
+    font-family: inherit;
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
 }
@@ -167,6 +168,7 @@ body {
     background-color: var(--grey-50);
     color: var(--green-900);
     text-align: center;
+    font-family: inherit;
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
 }
